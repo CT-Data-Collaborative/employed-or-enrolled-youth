@@ -16,7 +16,7 @@ source('./scripts/acsHelpers.R')
 # Get geography object for CT and subcounty divisions
 acsdata <- getACSData(
     getCTGeos("town"),
-    yearList = 2010:2016,
+    yearList = 2010:2017,
     table = "B14005"
 )
 
@@ -170,7 +170,7 @@ dataset <- dataset %>%
 # write to table
 write.table(
     dataset,
-    file.path(getwd(), "data", "employed-or-enrolled-youth.csv"),
+    file.path(getwd(), "data", "employed-or-enrolled-youth-2017.csv"),
     sep = ",",
     row.names = F, 
     na="-9999"
